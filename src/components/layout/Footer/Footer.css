@@ -1,0 +1,13 @@
+footer {
+    color: black;
+    height: 70px;
+    font-weight: bolder;
+    font-size: 1rem;
+    background-color: rgb(156, 219, 219);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
