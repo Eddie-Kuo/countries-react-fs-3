@@ -5,7 +5,7 @@ import './Main.css';
 
 
 export default function Main() {
-  const { countries, error, continent, setContinent, filterCountries } = useCountries();
+  const { error, continent, setContinent, filterCountries, loading } = useCountries();
 
   return (
     <>
@@ -24,11 +24,13 @@ export default function Main() {
         <option value='South America' >South America</option>
         <option value='Asia' >Asia</option>
       </select>
-      <main>
-        {filterCountries().map(country => (
-          <Country key={country.id} {...country} />
-        ))}
-      </main>
+      { loading ? <h1 className='loading'>Loading...</h1> : 
+        <main>
+          {filterCountries().map(country => (
+            <Country key={country.id} {...country} />
+          ))}
+        </main>
+      }
     </>
   );
 }
