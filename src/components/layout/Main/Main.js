@@ -1,10 +1,11 @@
 import React from 'react';
-import { getCountries } from '../../../services/client';
+import { useCountries } from '../../../hooks/useCountries';
 import './Main.css';
 
+
 export default function Main() {
-  const country = getCountries();
-  console.log(country);
+  const { countries } = useCountries();
+  console.log(countries);
   return (
     <main>
       Main
