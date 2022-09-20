@@ -10,3 +10,8 @@ export function checkError({ data, error }) {
   }
   return data;
 }
+
+export async function getCountries() {
+  const response = await client.from('countries').select('*');
+  return checkError(response);
+}
