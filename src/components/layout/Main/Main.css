@@ -1,5 +1,8 @@
 main {
-    height: 100vh;
+    /* height: 100vh; */
+    height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .error {
