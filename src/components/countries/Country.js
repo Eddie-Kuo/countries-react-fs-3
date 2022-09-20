@@ -2,10 +2,12 @@ import React from 'react';
 import './Country.css';
 
 export default function Country({ id, name, iso2, iso3, localName, continent }) {
+  const abbr = iso2;
+  const newAbbr = abbr.toLowerCase();
   return (
     <div className='country'>
       <h3>{name}</h3>
-      <img src={`https://flagcdn.com/16x12/${iso2}.png`} width="16" height="12" />
+      <img src={`https://flagcdn.com/72x54/${newAbbr}.png`} width="72" height="54" />
     </div>
   );
 }
