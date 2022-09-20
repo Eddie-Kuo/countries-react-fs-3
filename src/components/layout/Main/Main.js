@@ -4,11 +4,15 @@ import './Main.css';
 
 
 export default function Main() {
-  const { countries } = useCountries();
+  const { countries, error } = useCountries();
   console.log(countries);
   return (
-    <main>
-      Main
-    </main>
+    <>
+      <p className='error'>{error}</p>
+      <main>
+        Main
+      </main>
+    </>
+
   );
 }
