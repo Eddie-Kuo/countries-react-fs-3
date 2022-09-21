@@ -1,3 +1,16 @@
 main {
-    height: 100vh;
+    /* height: 100vh; */
+    height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.error {
+    color: rgb(242, 96, 96);
+    font-weight: bolder;
+    /* font-size: 1.2rem; */
+}
+
+select {
+    width: 120px;
 }
