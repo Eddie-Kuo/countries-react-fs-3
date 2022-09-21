@@ -7,6 +7,7 @@ export function useCountries() {
   const [error, setError] = useState('');
   const [continent, setContinent] = useState('all');
   const [loading, setLoading] = useState(false);
+  // const [search, setSearch] = useState('');
 
   useEffect(() => {
     async function fetchData() {
@@ -26,7 +27,8 @@ export function useCountries() {
   const filterCountries = () => {
     if (continent === 'all') return countries;
     return countries.filter((country) => country.continent === continent);
+    
   };
-
-  return { countries, error, setContinent, filterCountries, continent, loading };
+  
+  return { error, setContinent, filterCountries, continent, loading };
 }

@@ -5,12 +5,14 @@ import './Main.css';
 
 
 export default function Main() {
-  const { error, continent, setContinent, filterCountries, loading } = useCountries();
+  const { error, continent, setContinent, filterCountries, loading, search } = useCountries();
+
+  
 
   return (
     <>
       <p className='error'>{error}</p>
-      <label></label>
+      <input placeholder='Search' value={search}></input>
       <select value={continent}
         onChange={(e) => {
           setContinent(e.target.value);
