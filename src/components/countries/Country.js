@@ -1,7 +1,7 @@
 import React from 'react';
 import './Country.css';
 
-export default function Country({ id, name, iso2, iso3, localName, continent }) {
+export default function Country({ name, iso2 }) {
   const abbr = iso2;
   const newAbbr = abbr.toLowerCase();
   return (
